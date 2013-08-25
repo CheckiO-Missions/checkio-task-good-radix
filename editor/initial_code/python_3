@@ -1,11 +1,13 @@
-def checkio(a, b):
-    '''
-        sums two passed arguments
-    '''
-    return None
+def checkio(number):
+    """
+    Your solution
+    """
+    return 0
 
+#These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert checkio(3, 2) == 5
-    assert checkio(5, 7) == 12
-    print('Done')
+    assert checkio("18") == 10, "Simple decimal"
+    assert checkio("1010101011") == 2, "Any number is divisible by 1"
+    assert checkio("222") == 3, "3rd test"
+    assert checkio("A23B") == 14, "It's not a hex"
+    print('Local tests done')
