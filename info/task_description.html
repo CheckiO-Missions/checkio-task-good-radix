@@ -3,28 +3,35 @@
     that a positional numeral system uses to represent numbers.
     For example, for the decimal system the radix is ten, because it uses the ten digits from 0 through 9.
     In the system with radix 13, for example,
-    a string of digits such as 398 denotes the decimal number 3 * 13^2 + 9 * 13^1 + 8 * 13^0.
+    a string of digits such as 398 denotes the decimal number <em>3 * 13^2 + 9 * 13^1 + 8 * 13^0</em>.
     For the systems with the radix more than 10, we will use capital Latin symbols from A to Z, where A = 10, B = 11 ...
 </p>
 
 <p>
-    You are given a some number written as a string with the radix equal to <strong>K (2 &lt; k &lt; 37)</strong>.
+    You are given a some number written as a string with the radix equal to <strong>k (2 &lt; k &lt; 37)</strong>.
     We know that our number is divisible by <strong>(k - 1)</strong> without remainder.
     You should find the minimal possible K, if it exist, or return 0.
 </p>
-
 <p>
-    <strong>Input: </strong> A number written as a string.
+    <strong>Input: </strong> A number written as a string. Unicode.
 </p>
 
 <p>
     <strong>Output: </strong> A radix k. Integer.
 </p>
 
-
-
+{% if "python 2" in interpreter|lower %}
 <div class="for_info_only">
-    <pre class="brush: python">checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+    <pre class="brush: python">checkio(u"18") == 10
+checkio(u"1010101011") == 2
+checkio(u"222") == 3
+checkio(u"A23B") == 14</pre>
 </div>
+{% else %}
+<div class="for_info_only">
+    <pre class="brush: python">checkio("18") == 10
+checkio("1010101011") == 2
+checkio("222") == 3
+checkio("A23B") == 14</pre>
+</div>
+{% endif %}
