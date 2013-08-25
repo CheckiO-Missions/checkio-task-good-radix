@@ -1,34 +1,30 @@
 <p>
-    <i>( Describe task in general )</i>
+    In mathematical numeral systems, the radix or base is the number of unique digits, including zero,
+    that a positional numeral system uses to represent numbers.
+    For example, for the decimal system the radix is ten, because it uses the ten digits from 0 through 9.
+    In the system with radix 13, for example,
+    a string of digits such as 398 denotes the decimal number 3 * 13^2 + 9 * 13^1 + 8 * 13^0.
+    For the systems with the radix more than 10, we will use capital Latin symbols from A to Z, where A = 10, B = 11 ...
 </p>
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    You are given a some number written as a string with the radix equal to <strong>K (2 &lt; K &lt; 36)></strong>.
+    We know that our number is divisible by <strong>(K - 1)</strong> without remainder.
+    You should find the minimal possible K, if it exist, or return 0.
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Input: </strong> A number written as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> A radix K. Integer.
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
-    <p>
-        <strong>Example:</strong>
-    </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
+    <pre class="brush: python">checkio(3, 2) == 5
 checkio(5, 7) == 12
     </pre>
 </div>
