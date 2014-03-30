@@ -8,16 +8,23 @@
 </p>
 
 <p>
-    You are given some number written as a string with the radix equal to <strong>k (1 &lt; k &lt; 37)</strong>.
+    You are given some number <strong>n</strong> written as a string with the radix equal to <strong>k (1 &lt; k &lt; 37)</strong>.
     We know that our number is divisible by <strong>(k - 1)</strong> without a remainder.
     You should find the minimal possible <strong>k</strong>, if it exists, or return 0.
 </p>
+
 <p>
-    <strong>Input: </strong> A number written as a string. Unicode.
+    For example: n = "18". As we can see <strong>k</strong> should be greater than 8.<br>
+    If k == 9, then n = 20 in the decimal system and 20&nbsp;%&nbsp;9&nbsp;==&nbsp;2. The wrong radix.<br>
+    If k == 10, then n = 18 in the decimal system and 18&nbsp;%&nbsp;9&nbsp;==&nbsp;0. We found the answer.<br>
+
+</p>
+<p>
+    <strong>Input: </strong> A number as a string.
 </p>
 
 <p>
-    <strong>Output: </strong> A radix k. Integer.
+    <strong>Output: </strong> The radix k as an integer.
 </p>
 
 {% if "python 2" in interpreter|lower %}
@@ -25,13 +32,30 @@
     <pre class="brush: python">checkio(u"18") == 10
 checkio(u"1010101011") == 2
 checkio(u"222") == 3
-checkio(u"A23B") == 14</pre>
+checkio(u"A23B") == 14
+checkio(u"IDDQD") == 0
+    </pre>
 </div>
 {% else %}
 <div class="for_info_only">
     <pre class="brush: python">checkio("18") == 10
 checkio("1010101011") == 2
 checkio("222") == 3
-checkio("A23B") == 14</pre>
+checkio("A23B") == 14
+checkio("IDDQD") == 0</pre>
 </div>
 {% endif %}
+
+
+<p>
+    <strong>How it is used:</strong>
+    Let's familiarize with numeral systems more careful and examine the radix.
+    Many devices are built to accept numbers in decimal representation and display results in decimal. Often such devices convert from decimal to some internal radix on input, do all internal operations in that radix, and then convert the results from the internal radix to decimal on output. Such devices could in principle use any radix internally.
+    The people who design such computing devices sometimes wonder what would be the "best" radix to use internally -- radix economy.
+
+    The octal, hexadecimal and base-64 systems are often used in computing because of their ease as shorthand for binary.
+    For example, every hexadecimal digit has an equivalent 4 digit binary number.
+</p>
+<p>
+    <strong>Precondition:</strong> A number conforms regexp "[A-Z0-9]{1, 10}".
+</p>
