@@ -23,43 +23,53 @@
 
 </p>
 <p>
-    <strong>Input: </strong> A number as a string.
+    <strong>Входные данные: </strong> Число как строка.
 </p>
 
 <p>
-    <strong>Output: </strong> The radix k as an integer.
+    <strong>Выходные данные: </strong> Основание k как число.
 </p>
 
 {% if "python 2" in interpreter|lower %}
 <div class="for_info_only">
-    <pre class="brush: python">checkio(u"18") == 10
-checkio(u"1010101011") == 2
-checkio(u"222") == 3
-checkio(u"A23B") == 14
-checkio(u"IDDQD") == 0
+    <pre class="brush: python">
+        checkio(u"18") == 10
+        checkio(u"1010101011") == 2
+        checkio(u"222") == 3
+        checkio(u"A23B") == 14
+        checkio(u"IDDQD") == 0
     </pre>
 </div>
 {% else %}
 <div class="for_info_only">
-    <pre class="brush: python">checkio("18") == 10
-checkio("1010101011") == 2
-checkio("222") == 3
-checkio("A23B") == 14
-checkio("IDDQD") == 0</pre>
+    <pre class="brush: python">
+        checkio("18") == 10
+        checkio("1010101011") == 2
+        checkio("222") == 3
+        checkio("A23B") == 14
+        checkio("IDDQD") == 0
+    </pre>
 </div>
 {% endif %}
 
 
 <p>
-    <strong>How it is used:</strong>
-    Let's familiarize with numeral systems more careful and examine the radix.
-    Many devices are built to accept numbers in decimal representation and display results in decimal. Often such devices convert from decimal to some internal radix on input, do all internal operations in that radix, and then convert the results from the internal radix to decimal on output. Such devices could in principle use any radix internally.
-    The people who design such computing devices sometimes wonder what would be the "best" radix to use internally -- radix economy.
+    <strong>Как это используется: </strong>
 
-    The octal, hexadecimal and base-64 systems are often used in computing because of their ease as shorthand for binary.
+    Давайте познакомимся с системами счисления более тщательно и изучим основания.
+    Многие устройства построены, чтобы принимать числа
+    в десятичном представлении и отображать результаты в десятичной системе. 
+    Часто такие устройства преобразуют из десятичной системы счисления в 
+    какую-то внутреннюю систему счисления на входе, 
+    производят все внутренние операции в этой системе счисления, 
+    а затем преобразуют результаты из внутренней системе счисления 
+    в десятичную на выходе. Такие устройства могут, в принципе, 
+    использовать внутри любую систему счисления.
+    Люди, которые разрабатывают различные вычислительные устройства иногда задаются вопросом, какое было бы "наилучшее" основание системы для использования.
+    Восьмеричная, шестнадцатеричная и 64-ая системы часто используются для вычисления из-за их легкости, как сокращение от двоичной.
 
 </p>
 <p>
-    <strong>Precondition:</strong> A number conforms regexp "[A-Z0-9]{1, 10}".<br>
-    0 &lt; number
+    <strong>Предусловия: </strong> Число соответствует регулярному выражению "[A-Z0-9]{1, 10}".<br>
+    0 &lt; Число
 </p>
