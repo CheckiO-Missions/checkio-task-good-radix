@@ -1,0 +1,65 @@
+<p>
+    В математических системах счисления, 
+    основание или база системы счисления это уникальное число (включая нуль), 
+    такое что позиционная система использует его для представления чисел.
+    Например: в десятичной системе счисления, основание равно десять.
+    Это потому, что она имеет десять цифр от 0 до 9. 
+    В системе с основанием 13, должно быть 13 цифр. 
+    Например: последовательность цифр, таких как 398 обозначает десятичное число
+    <em>3 * 13^2 + 9 * 13^1 + 8 * 13^0</em>.
+    Для оснований более 10 будем использовать только заглавные латинские символы от A до Z, где A = 10, B = 11 ...
+</p>
+
+<p>
+    Вам дано некоторое число <strong>n</strong> записанное как строка с основанием равным <strong>k (1 &lt; k &lt; 37)</strong>.
+    Вы знаете что наше число делится на <strong>(k - 1)</strong> без остатка.
+    Вы должны найти минимально возможное <strong>k</strong>, если это возможно, или вернуть 0.
+</p>
+
+<p>
+    Например: n = "18". Как мы можем заметить <strong>k</strong> должно быть больше чем 8. <br>
+    Если k == 9, тогда n = 17 в десятичной системе и 17&nbsp;%&nbsp;8&nbsp;==&nbsp;1. Неверное основание.<br>
+    Если k == 10, тогда n = 18 в десятичной системе и 18&nbsp;%&nbsp;9&nbsp;==&nbsp;0. Найденный ответ.<br>
+
+</p>
+<p>
+    <strong>Input: </strong> A number as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The radix k as an integer.
+</p>
+
+{% if "python 2" in interpreter|lower %}
+<div class="for_info_only">
+    <pre class="brush: python">checkio(u"18") == 10
+checkio(u"1010101011") == 2
+checkio(u"222") == 3
+checkio(u"A23B") == 14
+checkio(u"IDDQD") == 0
+    </pre>
+</div>
+{% else %}
+<div class="for_info_only">
+    <pre class="brush: python">checkio("18") == 10
+checkio("1010101011") == 2
+checkio("222") == 3
+checkio("A23B") == 14
+checkio("IDDQD") == 0</pre>
+</div>
+{% endif %}
+
+
+<p>
+    <strong>How it is used:</strong>
+    Let's familiarize with numeral systems more careful and examine the radix.
+    Many devices are built to accept numbers in decimal representation and display results in decimal. Often such devices convert from decimal to some internal radix on input, do all internal operations in that radix, and then convert the results from the internal radix to decimal on output. Such devices could in principle use any radix internally.
+    The people who design such computing devices sometimes wonder what would be the "best" radix to use internally -- radix economy.
+
+    The octal, hexadecimal and base-64 systems are often used in computing because of their ease as shorthand for binary.
+
+</p>
+<p>
+    <strong>Precondition:</strong> A number conforms regexp "[A-Z0-9]{1, 10}".<br>
+    0 &lt; number
+</p>
