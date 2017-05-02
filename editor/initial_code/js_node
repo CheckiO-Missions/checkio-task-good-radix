@@ -1,0 +1,16 @@
+"use strict";
+
+function goodRadix(number){
+    return 0;
+}
+
+var assert = require('assert');
+
+if (!global.is_checking) {
+    assert.equal(goodRadix("18"), 10, "Simple decimal");
+    assert.equal(goodRadix("1010101011"), 2, "Any number is divisible by 1");
+    assert.equal(goodRadix("222"), 3, "3rd test");
+    assert.equal(goodRadix("A23B"), 14, "It's not a hex");
+    assert.equal(goodRadix("IDDQD"), 0, "k is not exist");
+    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+}
