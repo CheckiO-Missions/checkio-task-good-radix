@@ -27,25 +27,23 @@
     <strong>Output: </strong> The radix k as an integer.
 </p>
 
-{% if "python 2" in interpreter|lower %}
-<div class="for_info_only">
-    <pre class="brush: python">checkio(u"18") == 10
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+goodRadix(u"18") == 10
+goodRadix(u"1010101011") == 2
+goodRadix(u"222") == 3
+goodRadix(u"A23B") == 14
+goodRadix(u"IDDQD") == 0
+</pre>
+{% else %}
+<pre class="brush: python">
+checkio(u"18") == 10
 checkio(u"1010101011") == 2
 checkio(u"222") == 3
 checkio(u"A23B") == 14
 checkio(u"IDDQD") == 0
-    </pre>
-</div>
-{% else %}
-<div class="for_info_only">
-    <pre class="brush: python">checkio("18") == 10
-checkio("1010101011") == 2
-checkio("222") == 3
-checkio("A23B") == 14
-checkio("IDDQD") == 0</pre>
-</div>
+</pre>
 {% endif %}
-
 
 <p>
     <strong>How it is used:</strong>
